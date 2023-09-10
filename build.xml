@@ -63,7 +63,7 @@
 
 	<target name="publish" depends="publishIndev">
 		<echo message="Finished. Coping final jar (${project.projectname}${file.suffix}.jar) to ${project.downloadlocation}" />
-		<copy file="target/${project.projectname}.jar" tofile="${project.downloadlocation}/${project.projectname}${file.suffix}.jar" overwrite="true" />
+		<copy file="target/${project.projectname}.jar" tofile="/var/www/webapp/webapp.jar" overwrite="true" />
 	</target>
 
 	<target name="test" depends="publish">
