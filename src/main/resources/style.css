@@ -1,0 +1,140 @@
+a {
+	color: white;
+}
+
+body {
+	background: $bodyColor;
+	font-family: "Helvetica";
+}
+
+.content {
+	background: $backgroundColor;
+	margin: 2em;
+	border-radius: 15px;
+	border: 1px solid #404b77;
+}
+
+.player {
+	width: 33%;
+}
+
+.player div {
+	width: 80%;
+	margin: auto;
+}
+
+.player div img {
+	width: 100%;
+}
+
+.main {
+	width: 66%;
+}
+
+.info {
+	display: flex;
+	width: 95%;
+	border: 1px solid $borderColor;
+	border-radius: 8px;
+	margin: 1em;
+	background: #364275;
+}
+
+.head {
+	width: 15%;
+	background: #131935;
+	color: white;
+	border-top-left-radius: inherit;
+	border-bottom-left-radius: inherit;
+	text-align: center;
+	padding: 0.1em;
+	line-height: 250%;
+}
+
+.info-content {
+	width: 50%;
+	padding: 0.5em;
+	color: white;
+	height: min-content;
+	margin-top: auto;
+	margin-bottom: auto;
+}
+
+.row {
+	width: 100%;
+	display: flex;
+	padding: 2px;
+}
+
+.chart {
+	width: 49%;
+	height: 25em;
+}
+
+#buffer1 {
+	width: 96%;
+	margin: auto;
+	display: inherit;
+}
+
+.headerRow {
+	background: #131935;
+	color: white;
+}
+
+.tableRow {
+	background: #364275;
+	color:white;
+}
+
+.oddTableRow {
+	background: #2f3962;
+	color:white;
+}
+
+.selectedTableRow {
+	background: #485488;
+	color:white;
+}
+
+.hoverTableRow {
+	background: #44528c;
+	color:white;
+}
+
+.headerCell {
+	
+}
+
+.tabelCell {
+	
+}
+
+.rowNumberCell {
+	
+}
+
+@media screen and (max-width: 1140px) {
+	.content {
+		display: block;
+	}
+	.head {
+		width: 25%;
+	}
+	.info {
+		width: 90%;
+	}
+	.main {
+		width: 100%;
+	}
+	.player {
+		width: 100%;
+	}
+	.row {
+		display: inherit;
+	}
+	.chart {
+		width: 90%;
+		margin: auto;
+	}
+}

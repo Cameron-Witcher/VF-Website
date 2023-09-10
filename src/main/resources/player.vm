@@ -1,0 +1,100 @@
+#set($borderColor="#404b77")
+#set($bodyColor="#223068")
+#set($backgroundColor="#202a55")
+#macro(inforow $head $info)
+    <div class="info">
+		<div class="head">$head</div>
+		<div class="info-content">$info</div>
+	</div>
+#end
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		#parse("head.vm")
+		<title>$name | Stats</title>
+		<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+		<script type="text/javascript">
+		  #parse("player_charts.js")
+		</script>
+	</head>
+	<body>
+		<div class="content">
+			<div class="row">
+				<div class="player">
+					<div>
+						<img src="https://visage.surgeplay.com/full/700/$uuid" title="Minecraft Skin" />
+					</div>
+					
+				</div>
+				<div class="main">
+					#inforow("UUID" $uuid)
+					#inforow("Username" $name)
+					<div class="info">
+						<div class="head">Last Seen</div>
+						<div class="info-content">
+							<script>document.write(new Date($date).toLocaleDateString("en-US"));</script>
+						</div>
+					</div>
+					<div class="info">
+						<div class="head">Online</div>
+						<div class="info-content">
+							#if($online == "yes")
+								True
+							#else
+								False
+							#end
+						</div>
+					</div>
+					<div class="info">
+						<div class="head">Discord Booster</div>
+						<div class="info-content">
+						  #if($nitro == "true")
+						    True
+						  #else
+						    False
+						  #end
+						</div>
+					</div>
+					<div class="info">
+						<div class="head">Discord Linked</div>
+						<div class="info-content">
+							#if($discord_id)
+								Linked
+							#else
+								Not Linked
+							#end
+						</div>
+					</div>
+					#inforow("Balance" $$balance)
+					#inforow("Gems" $gems)
+					#inforow("Last Version" $last_version)
+					#set($tp=($total_playtime/54000)*0.015)
+					#inforow("Total Playtime" "$tp hours")
+					<div class="info">
+						<div class="head">Forums Linked</div>
+						<div class="info-content">
+							#if($forums)
+								<a href="https://www.mysticcloud.net/profile/$forums.nickname" target="_blank">Linked<sup><i style="font-size: xx-small;" class="fas fa-external-link-alt"></i></sup></a>
+							#else
+								Not Linked
+							#end
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div id="buffer1">
+					<div class="chart" id="playtime_chart"></div>
+					<div class="chart" id="infringement_chart">
+					#if(!$infringements)
+					  No Infringements :)
+					#end
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				
+			</div>
+		</div>
+	</body>
+</html>
