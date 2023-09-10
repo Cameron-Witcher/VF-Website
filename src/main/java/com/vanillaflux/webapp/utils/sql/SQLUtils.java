@@ -1,4 +1,4 @@
-package net.lushmc.api.utils.sql;
+package com.vanillaflux.webapp.utils.sql;
 
 import java.util.HashMap;
 import java.util.Map;

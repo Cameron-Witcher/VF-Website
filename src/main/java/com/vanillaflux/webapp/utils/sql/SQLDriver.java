@@ -1,4 +1,4 @@
-package net.lushmc.api.utils.sql;
+package com.vanillaflux.webapp.utils.sql;
 
 public enum SQLDriver {
 	

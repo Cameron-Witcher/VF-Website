@@ -1,4 +1,4 @@
-package net.lushmc.api;
+package com.vanillaflux.webapp;
 
 import java.awt.image.BufferedImage;
 import java.io.BufferedReader;
@@ -22,9 +22,10 @@ import javax.imageio.ImageIO;
 import org.json2.JSONException;
 import org.json2.JSONObject;
 
-import net.lushmc.api.utils.sql.IDatabase;
-import net.lushmc.api.utils.sql.SQLDriver;
-import net.lushmc.api.utils.sql.SQLUtils;
+import com.vanillaflux.webapp.utils.sql.IDatabase;
+import com.vanillaflux.webapp.utils.sql.SQLDriver;
+import com.vanillaflux.webapp.utils.sql.SQLUtils;
+
 import spark.ModelAndView;
 import spark.Spark;
 import spark.template.velocity.VelocityTemplateEngine;

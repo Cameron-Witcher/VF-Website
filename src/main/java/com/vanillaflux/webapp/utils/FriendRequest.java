@@ -1,4 +1,4 @@
-package net.lushmc.api.utils;
+package com.vanillaflux.webapp.utils;
 
 public class FriendRequest {
 

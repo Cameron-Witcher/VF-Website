@@ -1,4 +1,4 @@
-package net.lushmc.api.utils;
+package com.vanillaflux.webapp.utils;
 
 import java.sql.ResultSet;
 import java.sql.SQLException;
@@ -12,7 +12,7 @@ import java.util.UUID;
 import org.json2.JSONArray;
 import org.json2.JSONObject;
 
-import net.lushmc.api.utils.sql.SQLUtils;
+import com.vanillaflux.webapp.utils.sql.SQLUtils;
 
 public class Utils {
 
