@@ -129,6 +129,11 @@ public class Main {
 
 		});
 
+		Spark.get("/web", (q, a) -> {
+			JSONObject json = new JSONObject("{}");
+			return new VelocityTemplateEngine().render(new ModelAndView(json.toMap(), "player.vm"));
+		});
+
 		Spark.path("/gui", () -> {
 			Spark.get("/player/:name", (q, a) -> {
 				JSONObject json = getPlayerJson(q.params(":name"));
