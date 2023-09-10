@@ -37,39 +37,39 @@ public class Main {
 		System.out.println("Server started.");
 
 		BufferedReader br1;
-		Properties prop = new Properties();
-		try {
-
-			br1 = new BufferedReader(new FileReader(new File("config.properties")));
-			String st;
-			while ((st = br1.readLine()) != null) {
-				prop.setProperty(st.split("=")[0], st.split("=")[1]);
-			}
-			br1.close();
-
-			System.out.println("Testing property loading. user: " + prop.getProperty("username"));
-
-			// get the property value and print it out
-//			String user = prop.getProperty("user");
-//			String company1 = prop.getProperty("company1");
-//			String company2 = prop.getProperty("company2");
-//			String company3 = prop.getProperty("company3");
-
-//			result = "Company List = " + company1 + ", " + company2 + ", " + company3;
-//			System.out.println(result + "\nProgram Ran on " + time + " by user=" + user);
-		} catch (Exception e) {
-			System.out.println("Exception: " + e.getLocalizedMessage());
-			prop.setProperty("username", "api");
-			prop.setProperty("password", "DHRL?eGiab6X!Qi@4MpR3rF#D?Q#aY");
-			prop.setProperty("host", "sql.mysticcloud.net");
-		}
-
-//		SQLUtils.createDatabase("minecraft", new IDatabase(SQLDriver.MYSQL, prop.getProperty("host"), "minecraft", 3306,
-//				prop.getProperty("username"), prop.getProperty("password")));
-//		SQLUtils.createDatabase("forums", new IDatabase(SQLDriver.MYSQL, prop.getProperty("host"), "forums", 3306,
-//				prop.getProperty("username"), prop.getProperty("password")));
-		SQLUtils.createDatabase("plugins", new IDatabase(SQLDriver.MYSQL, prop.getProperty("host"), "s9_lush_core",
-				3306, prop.getProperty("username"), prop.getProperty("password")));
+//		Properties prop = new Properties();
+//		try {
+//
+//			br1 = new BufferedReader(new FileReader(new File("config.properties")));
+//			String st;
+//			while ((st = br1.readLine()) != null) {
+//				prop.setProperty(st.split("=")[0], st.split("=")[1]);
+//			}
+//			br1.close();
+//
+//			System.out.println("Testing property loading. user: " + prop.getProperty("username"));
+//
+//			// get the property value and print it out
+////			String user = prop.getProperty("user");
+////			String company1 = prop.getProperty("company1");
+////			String company2 = prop.getProperty("company2");
+////			String company3 = prop.getProperty("company3");
+//
+////			result = "Company List = " + company1 + ", " + company2 + ", " + company3;
+////			System.out.println(result + "\nProgram Ran on " + time + " by user=" + user);
+//		} catch (Exception e) {
+//			System.out.println("Exception: " + e.getLocalizedMessage());
+//			prop.setProperty("username", "api");
+//			prop.setProperty("password", "DHRL?eGiab6X!Qi@4MpR3rF#D?Q#aY");
+//			prop.setProperty("host", "sql.mysticcloud.net");
+//		}
+//
+////		SQLUtils.createDatabase("minecraft", new IDatabase(SQLDriver.MYSQL, prop.getProperty("host"), "minecraft", 3306,
+////				prop.getProperty("username"), prop.getProperty("password")));
+////		SQLUtils.createDatabase("forums", new IDatabase(SQLDriver.MYSQL, prop.getProperty("host"), "forums", 3306,
+////				prop.getProperty("username"), prop.getProperty("password")));
+//		SQLUtils.createDatabase("plugins", new IDatabase(SQLDriver.MYSQL, prop.getProperty("host"), "s9_lush_core",
+//				3306, prop.getProperty("username"), prop.getProperty("password")));
 
 //		Utils.init();
 
